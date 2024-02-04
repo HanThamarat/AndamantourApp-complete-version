@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "230449477840",
+    "project_id": "andamantour-app-d7115",
+    "storage_bucket": "andamantour-app-d7115.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230449477840:android:a4ca849ec0aea7f76646d5",
+        "android_client_info": {
+          "package_name": "com.example.fluttertest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "230449477840-ajlo9e8qr6kmv9chs9kmj3cr00u6mdui.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8nQHXxPitaIH5377k6kOL_xBgiagwjg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "230449477840-ajlo9e8qr6kmv9chs9kmj3cr00u6mdui.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

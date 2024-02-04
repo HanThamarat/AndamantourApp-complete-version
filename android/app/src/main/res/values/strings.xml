@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AndamanTour-Login</string>
+    <string name="facebook_app_id">720004136614055</string>
+    <string name="fb_login_protocol_scheme">fb720004136614055</string>
+    <string name="facebook_client_token">a8606954f71d4e3cea61a419ef974066</string>
+</resources>
