@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background: #ffebeb;
+}
+
+/* nav bar */
+.main-container {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    padding: 0rem 16rem;
+}
+
+.header img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+}
+
+.header-title {
+    color: #004AAD;
+}
+
+
+.main-title {
+    justify-content: flex-start;
+    display: flex;
+    color: #004AAD;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+
+/* .package-card  */
+
+.package-card {
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.pack-title {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+
+.inputBx-name h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #000;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.inputBx-name input {
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #004AAD;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #000;
+    background: transparent;
+    border-radius: 5px;
+}
+
+.inputBx input:focus {
+    border-color: rgba(3, 102, 214, 0.7);
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
+}
+
+
+.inputBx select:focus {
+    border-color: rgba(3, 102, 214, 0.7);
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
+}
+
+.inputBx h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #000;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.inputBx input {
+    width: 100%;
+    padding: 10px 40px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #004AAD;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #000;
+    background: transparent;
+    border-radius: 5px;
+}
+
+.inputBx select {
+    width: 100%;
+    padding: 10px 70px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #004AAD;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #000;
+    background: transparent;
+    border-radius: 5px;
+}
+
+.inputBx input[placeholder="PackageName"] {
+    padding-left: 10px;
+}
+
+.inputBx input[placeholder="Adult price"] {
+    padding-left: 10px;
+}
+
+.inputBx input[placeholder="Kid price"] {
+    padding-left: 10px;
+}
+
+.inputBx input[placeholder="Charter price"] {
+    padding-left: 10px;
+}
+
+.inputBx input[placeholder="Location"] {
+    padding-left: 10px;
+}
+
+
+.inputBx input[placeholder="Please enter in %."] {
+    padding-left: 10px;
+}
+
+.pack-deteil {
+    padding-top: 20px;
+}
+
+.pack-deteil-name h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #000;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.pack-deteil-name textarea {
+    width: 100%;
+    padding: 10px 70px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #004AAD;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #000;
+    background: transparent;
+    border-radius: 5px;
+}
+
+.package-container .pack-next-button {
+    justify-content: end;
+    padding-top: 20px;
+}
+
+.pack-next-button #button {
+    padding: 10px 50px;
+    font-size: 16px;
+    font-weight: 400;
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid #004AAD;
+    transition: 0.2s;
+}
+
+.pack-next-button #button:hover {
+    background: #004AAD;
+    color: #fff;
+}
+
+.inputBx-image h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #000;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.inputBx-image input {
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #004AAD;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #000;
+    background: transparent;
+    border-radius: 5px;
+}
+
+.error-alert {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    color: #ffffff;
+    background: #ff5b00;
+    border: 1px solid #ff5b00;
+    border-radius: 10px;
+}
+
+.suscess-alert {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    color: #ffffff;
+    background: #4BB543;
+    border: 1px solid #4BB543;
+    border-radius: 5px;
+}
+
+.show-image{
+    padding-top: 20px;
+}
+
+.show-image img{
+    width: 300px;
+    height: 220px;
+    border-radius: 10px;
+}
+
+/* back-page */
+.black-page{
+    padding-bottom: 20px;
+}
+.black-page button {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #004AAD;
+    border-radius: 50%;
+    background: transparent;
+    transition: 0.2s;
+}
+.black-page i {
+    font-size: 16px;
+    color: #004AAD;
+    transition: 0.1s;
+}
+.black-page button:hover {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #004AAD;
+    border-radius: 50%;
+    background: #004AAD;
+}
+.black-page i:hover {
+    font-size: 16px;    
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .pack-title {
+        display: grid;
+        grid-template-columns: auto 3fr;
+    }
+}

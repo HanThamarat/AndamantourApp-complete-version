@@ -1,0 +1,105 @@
+
+
+body {
+    overflow: hidden;
+}
+
+.toast {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    padding: 20px 35px 20px 25px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 5px 10px rga(0,0,0,0.1);
+    border-left: 6px solid #4070f4;
+    overflow: hidden;
+    transform: translateX(calc(100% + 35px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.toast.active {
+    transform: translateX(0%);
+}
+
+.toast .toast-content {
+    display: flex;
+    align-items: center;
+}
+
+.toast-content .message {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.toast-content .check {
+    display: flex;
+    height: 35px;
+    width: 35px;
+    font-size: 16px;
+    background-color: #4070f4;
+    color: #fff;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.message .msg {
+    font-size: 18px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.message .msg.msg--title {
+    font-weight: 600;
+    color: #333;
+}
+
+.toast .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.toast .close:hover {
+    opacity: 1;
+}
+
+.toast .progrees {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #ddd;
+}
+
+.toast .progrees:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #4070f4;
+}
+
+.progrees.active:before {
+    animation: progress 5s linear forwards ;
+}
+
+@keyframes progress {
+    100%{
+        right: 100%;
+    }
+}
+
+button {
+    border: 1px solid;
+    padding: 10px;
+    background: #4070f4;
+}

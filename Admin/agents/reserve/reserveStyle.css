@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background: #ffebeb;
+}
+
+/* nav bar */
+.main-container {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    padding: 0rem 16rem;
+}
+
+/* alert */
+.error-alert {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    color: #ffffff;
+    background: #ff5b00;
+    border: 1px solid #ff5b00;
+    border-radius: 10px;
+}
+
+.suscess-alert {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    color: #ffffff;
+    background: #ff5b00;
+    border: 1px solid #ff5b00;
+    border-radius: 10px;
+}
+
+
+
+.header img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+}
+
+.header-title {
+    color: #004AAD;
+}
+
+/* table  */
+.main-title {
+    justify-content: space-between;
+    display: flex;
+    color: #004AAD;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.table-card {
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.table-container {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #004AAD;
+    color: #fff;
+}
+
+th {
+    padding: 15px;
+    text-align: center;
+}
+
+tbody{
+    background: #f2f2f2;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #fff;
+}
+
+tfoot {
+    background: #004AAD;
+    font-weight: bold;
+    color: #fff;
+}
+
+tfoot td {
+    color: green;
+    background: none;
+}
+
+.main-title button {
+    font-size: 15px;
+    font-weight: 200;
+    width: 150px;
+    height: 30px;
+    background: #004AAD;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.main-title button:hover {
+   background:#082f66;
+}
+
+.main-title a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.table-container i{
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.detail-btn {
+    border: 1px solid #000;
+}

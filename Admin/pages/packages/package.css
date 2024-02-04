@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+    display: flex;
+    background: #ffebeb;
+}
+
+
+/* nav */
+.main-container {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    padding: 0rem 16rem;
+}
+
+.header img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+}
+
+.header-title {
+    color: #004AAD;
+}
+
+/* table */
+
+.main-title {
+    color: #004AAD;
+    padding-bottom: 10px;
+}
+
+.table-card {
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.table-container {
+    width: 100%;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #004AAD;
+    color: #fff;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+}
+
+tbody{
+    background: #f2f2f2;
+}
+
+td{
+    padding: 15px;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background: #fff;
+}
+
+tfoot {
+    background: #004AAD;
+    font-weight: bold;
+    color: #fff;
+}
+
+tfoot td {
+    color: green;
+    background: none;
+}
+
+.main-title button {
+    font-size: 15px;
+    font-weight: 200;
+    width: 150px;
+    height: 30px;
+    background: #004AAD;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.main-title button:hover {
+   background:#082f66;
+}
+
+.main-title a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.table-container i{
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.confirm-button a {
+        margin: 5px;
+        padding: 10px 20px;
+        border: 1px solid #4BB543;
+        text-decoration: none;
+        color: #4BB543;
+        transition: 0.2s ease-in-out;
+}
+
+.confirm-button i {
+        padding-right: 10px;
+}
+
+.confirm-button a:hover {
+    color: #fff;
+    background: #4BB543;
+}
+
+/* edit-button */
+.edit-button {
+    border: none;
+    padding: 10px;
+    background: #8338ec;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.edit-button a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+
+.edit-button i {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+
+.edit-button:hover a {
+    background: #3a86ff;
+}
+
+.edit-button:hover {
+    background: #3a86ff;
+}
+
+.error-alert {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 400px;
+    color: #ffffff;
+    background: #ff5b00;
+    border: 1px solid #ff5b00;
+    border-radius: 10px;
+}
+
+.suscess-alert {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    color: #ffffff;
+    background: #4BB543;
+    border: 1px solid #4BB543;
+    border-radius: 5px;
+}
+
+  /* on-off-status*/
+.change--status--off--btn {
+background: #004AAD;
+padding: 10px 32px;
+border: none;
+border-radius: 4px;
+color: #fff;
+cursor: pointer;
+position: relative;
+transition: all 0.35s;
+outline: none;
+}
+
+.change--status--off--btn a {
+position: relative;
+z-index: 2;
+color: #fff;
+text-decoration: none;
+}
+
+.change--status--off--btn:after {
+position: absolute;
+content: '';
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: #897c80;
+transition: all 0.35s;
+border-radius: 4px;
+}
+
+.change--status--off--btn:hover {
+color: #fff;
+}
+
+.change--status--off--btn:hover:after {
+width: 100%;
+}
+
+
+.change--status--on--btn {
+background: #897c80;
+padding: 10px 32px;
+border: none;
+border-radius: 4px;
+color: #fff;
+cursor: pointer;
+position: relative;
+transition: all 0.35s;
+outline: none;
+}
+
+.change--status--on--btn a {
+position: relative;
+z-index: 2;
+color: #fff;
+text-decoration: none;
+}
+
+.change--status--on--btn:after {
+position: absolute;
+content: '';
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+background: #004AAD;
+transition: all 0.35s;
+border-radius: 4px;
+}
+
+.change--status--on--btn:hover {
+color: #fff;
+}
+
+.change--status--on--btn:hover:after {
+width: 100%;
+}
+
+.on-off-buttom .not-confirm-st {
+border: 1px solid;
+}
+
+.on-off-buttom .not-confirm-st {
+padding: 9px;
+border: 1px solid transparent;
+background: gray;
+border-radius: 5px;
+color: #fff;
+}

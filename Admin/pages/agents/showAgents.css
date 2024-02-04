@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background: #ffebeb;
+}
+
+/* nav bar */
+.main-container {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    padding: 0rem 16rem;
+}
+
+/* alert */
+.error-alert {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    color: #ffffff;
+    background: #ff5b00;
+    border: 1px solid #ff5b00;
+    border-radius: 10px;
+}
+
+.suscess-alert {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    color: #ffffff;
+    background: #ff5b00;
+    border: 1px solid #ff5b00;
+    border-radius: 10px;
+}
+
+.header img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+}
+
+.header-title {
+    color: #004AAD;
+}
+
+/* table  */
+
+.main-title {
+    justify-content: space-between;
+    display: flex;
+    color: #004AAD;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.table-card {
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.table-container {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #004AAD;
+    color: #fff;
+}
+
+th, td{
+    padding: 15px;
+    text-align: center;
+}
+
+tbody{
+    background: #f2f2f2;
+}
+
+td{
+    padding: 15px;
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background: #fff;
+}
+
+tfoot {
+    background: #004AAD;
+    font-weight: bold;
+    color: #fff;
+}
+
+tfoot td {
+    color: green;
+    background: none;
+}
+
+.main-title button {
+    font-size: 15px;
+    font-weight: 200;
+    width: 150px;
+    height: 30px;
+    background: #004AAD;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.main-title button:hover {
+   background:#082f66;
+}
+
+.main-title a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.table-container i{
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+  /* on-off-status*/
+  .change--status--off--btn {
+    background: #004AAD;
+    padding: 10px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+    }
+
+    .change--status--off--btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+    }
+
+    .change--status--off--btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #897c80;
+    transition: all 0.35s;
+    border-radius: 4px;
+    }
+
+    .change--status--off--btn:hover {
+    color: #fff;
+    }
+
+    .change--status--off--btn:hover:after {
+    width: 100%;
+    }
+
+
+    .change--status--on--btn {
+    background: #897c80;
+    padding: 10px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+    }
+
+    .change--status--on--btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+    }
+
+    .change--status--on--btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #004AAD;
+    transition: all 0.35s;
+    border-radius: 4px;
+    }
+
+    .change--status--on--btn:hover {
+    color: #fff;
+    }
+
+    .change--status--on--btn:hover:after {
+    width: 100%;
+    }
+
+/* edit-button */
+        
+.edit-button  {
+    border: 1px solid;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    background: #8338ec;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+    
+.edit-button:hover  {
+    background: #3a86ff;
+}
+    
+.edit-button i {
+    font-size: 14px;
+    color: #fff;
+    background: #8338ec;
+    transition: 0.2s ease-in-out;
+}
+    
+.edit-button:hover i {
+    background: #3a86ff;
+}
+
+.delete-btn  {
+    border: 1px solid;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    background: #d00000;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+    
+.delete-btn:hover  {
+    background: #dc2f02;
+}
+    
+.delete-btn i {
+    font-size: 14px;
+    color: #fff;
+    background: #d00000;
+    transition: 0.2s ease-in-out;
+}
+    
+.delete-btn:hover i {
+    background: #dc2f02;
+}

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background: #ffebeb;
+}
+
+/* nav bar */
+.main-container {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    padding: 0rem 16rem;
+}
+
+.header img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+}
+
+.header-title {
+    color: #004AAD;
+}
+
+/* crad container */
+
+.card-container{
+    margin-top: 20px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.card-wapper {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main-title {
+    color: #004AAD;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.agent-card {
+    background: #ffebeb;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 350px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+
+.agent-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.amout {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 200;
+}
+z
+.amout-value {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.icon {
+    color: #fff;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background-color: #004AAD;
+}
+

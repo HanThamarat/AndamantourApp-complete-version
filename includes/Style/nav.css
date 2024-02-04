@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+li, a, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #caf0f8;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10%;
+    background: -webkit-gradient(
+        linear, 
+        left top, 
+        left bottom, 
+        from(rgba(0, 0, 0, 0.6)), to(transparent));
+    
+}
+
+.SignUp-SignIn li{
+    justify-content: flex-end;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.4s ease 0s;
+    
+}
+
+.nav_links li a:hover{
+    color: #004AAD;
+}
+
+button {
+    color: #caf0f8;
+    border: none;
+    width: 120px;
+    padding: 9.5px;
+    margin: 20px;
+    border-radius: 50px;
+    background-color: #004AAD;
+}
+
+
+.SignUp-SignIn a {
+    transition: all 0.4s ease 0s;
+}
+
+.SignUp-SignIn a:hover {
+    color: #004AAD;
+}
+
+
+button {
+    transition: all 0.4s ease 0s;
+}
+
+button:hover {
+    /* color: #caf0f8; */
+    background-color: #03045e;
+}
+
+
