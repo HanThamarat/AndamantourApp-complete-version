@@ -79,7 +79,12 @@ class _selectReviewState extends State<selectReview> {
             itemCount: snapshot.data.length,
             itemBuilder: (context, index) {
               List list = snapshot.data;
-              final int rateting = int.parse(list.elementAt(index)['stars']);
+              final int rateting;
+              if(list.elementAt(index)['stars'] == null || list.elementAt(index)['stars'] == '' || list.elementAt(index)['stars'] == 0) {
+                  rateting = 0;
+              } else {
+                  rateting = int.parse(list.elementAt(index)['stars']);
+              }
               return Container(
                 child: Card(
                   shape: RoundedRectangleBorder(

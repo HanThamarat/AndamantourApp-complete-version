@@ -38,6 +38,8 @@ class homeScreens extends StatefulWidget {
 class _homeScreensState extends State<homeScreens> {
   late final PageController pageController;
   int pageNo = 0;
+  int textTyping = 6;
+
 
   late final Timer carsoueItem;
 
@@ -69,6 +71,8 @@ class _homeScreensState extends State<homeScreens> {
     pageController.dispose();
     super.dispose();
   }
+  
+  
 
   @override
   Widget build(BuildContext context) {
@@ -144,7 +148,7 @@ class _homeScreensState extends State<homeScreens> {
                                                   milliseconds: 200),
                                             ),
                                           ],
-                                          totalRepeatCount: 4,
+                                          totalRepeatCount: textTyping,
                                           pause: const Duration(
                                               milliseconds: 5000),
                                           displayFullTextOnTap: true,
@@ -468,14 +472,7 @@ class _selectPackageState extends State<selectPackage> {
       return data;
     } else {
       // show alert
-      setState(() {
-        showTopSnackBar(
-          Overlay.of(context),
-          CustomSnackBar.error(
-            message: "Something went wronggggggg.",
-          ),
-        );
-      });
+     print('err homepage');
     }
   }
 

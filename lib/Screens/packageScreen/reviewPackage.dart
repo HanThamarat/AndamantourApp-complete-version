@@ -52,7 +52,18 @@ class _reviewScreenState extends State<reviewScreen> {
         setState(() {
           isloading = true;
         });
-          if (imageFile == null) {
+        if (imageFile == null) {
+          if (_rating == null) {
+            setState(() {
+              isloading = false;
+            });
+            showTopSnackBar(
+              Overlay.of(context),
+              CustomSnackBar.error(
+                message: "rating is required.",
+              ),
+            );
+          } else {
             final base64Image = null;
             final fileName = null;
             final response = await review_api.reviewApi(
@@ -61,32 +72,7 @@ class _reviewScreenState extends State<reviewScreen> {
                 _rating.toString(),
                 comentDetail.text,
                 base64Image,
-                fileName
-                );
-            if (response.statusCode == 201) {
-              final data = json.decode(response.body);
-              print(data);
-              showTopSnackBar(
-                Overlay.of(context),
-                CustomSnackBar.success(
-                  message: "Review success.",
-                ),
-              );
-              return Navigator.pop(context);
-            } else {
-              print('inser data err');
-            }
-          } else {
-            String base64Image = base64Encode(imageFile!.readAsBytesSync());
-            String fileName = imageFile!.path.split('/').last;
-            final response = await review_api.reviewApi(
-                widget.list[widget.index]['packID'],
-                UserID,
-                _rating.toString(),
-                comentDetail.text,
-                base64Image,
-                fileName
-                );
+                fileName);
             if (response.statusCode == 201) {
               final data = json.decode(response.body);
               print(data);
@@ -101,6 +87,39 @@ class _reviewScreenState extends State<reviewScreen> {
               print('inser data err');
             }
           }
+        } else {
+          if (_rating == null) {
+            showTopSnackBar(
+              Overlay.of(context),
+              CustomSnackBar.error(
+                message: "rating is required.",
+              ),
+            );
+          } else {
+            String base64Image = base64Encode(imageFile!.readAsBytesSync());
+            String fileName = imageFile!.path.split('/').last;
+            final response = await review_api.reviewApi(
+                widget.list[widget.index]['packID'],
+                UserID,
+                _rating.toString(),
+                comentDetail.text,
+                base64Image,
+                fileName);
+            if (response.statusCode == 201) {
+              final data = json.decode(response.body);
+              print(data);
+              showTopSnackBar(
+                Overlay.of(context),
+                CustomSnackBar.success(
+                  message: "Review success.",
+                ),
+              );
+              return Navigator.pop(context);
+            } else {
+              print('inser data err');
+            }
+          }
+        }
       } else {
         print('validate is null');
       }
@@ -108,17 +127,16 @@ class _reviewScreenState extends State<reviewScreen> {
   }
 
   Future pickImage() async {
-    try{
+    try {
       final image = await ImagePicker().pickImage(source: ImageSource.gallery);
-      if(image == null) return;
+      if (image == null) return;
       final imageTemporary = File(image.path);
       imageFile = File(image.path);
       setState(() => this.imageFile = imageTemporary);
-    }catch(err){
+    } catch (err) {
       print('Failed to pick image: $err');
     }
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -181,7 +199,8 @@ class _reviewScreenState extends State<reviewScreen> {
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(5.0),
                               ),
-                              contentPadding: EdgeInsets.only(left: 10, top: 20),
+                              contentPadding:
+                                  EdgeInsets.only(left: 10, top: 20),
                             ),
                           ),
                         ),
@@ -194,16 +213,28 @@ class _reviewScreenState extends State<reviewScreen> {
                               child: Container(
                                 padding: EdgeInsets.all(10),
                                 decoration: BoxDecoration(
-                                  color: GlobalColors.mainColor.withOpacity(0.2),
-                                  border: Border.all(color: GlobalColors.mainColor),
-                                  borderRadius: BorderRadius.circular(5)
-                                ),
+                                    color:
+                                        GlobalColors.mainColor.withOpacity(0.2),
+                                    border: Border.all(
+                                        color: GlobalColors.mainColor),
+                                    borderRadius: BorderRadius.circular(5)),
                                 child: Container(
                                   child: Row(
                                     children: [
-                                      FaIcon(FontAwesomeIcons.image, color: GlobalColors.mainColor,),
-                                      SizedBox(width: 5,),
-                                      Text("Select Image", style: TextStyle(fontFamily: 'Kanit', fontWeight: FontWeight.w400, color: GlobalColors.mainColor),)
+                                      FaIcon(
+                                        FontAwesomeIcons.image,
+                                        color: GlobalColors.mainColor,
+                                      ),
+                                      SizedBox(
+                                        width: 5,
+                                      ),
+                                      Text(
+                                        "Select Image",
+                                        style: TextStyle(
+                                            fontFamily: 'Kanit',
+                                            fontWeight: FontWeight.w400,
+                                            color: GlobalColors.mainColor),
+                                      )
                                     ],
                                   ),
                                 ),
@@ -214,16 +245,25 @@ class _reviewScreenState extends State<reviewScreen> {
                             ),
                           ],
                         ),
-                        SizedBox(height: 10,),
-                        imageFile != null ? Container(
-                          height: 200,
-                          width: double.infinity,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.file(imageFile!, fit: BoxFit.cover,),
-                          ),
-                        ) : Container(),
-                        SizedBox(height: 10,),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        imageFile != null
+                            ? Container(
+                                height: 200,
+                                width: double.infinity,
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Image.file(
+                                    imageFile!,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              )
+                            : Container(),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Container(
                             child: SizedBox(
                           width: double.infinity,
@@ -233,13 +273,15 @@ class _reviewScreenState extends State<reviewScreen> {
                             onPressed: () async {
                               review_Apis();
                             },
-                            child: isloading? spinkit : Text(
-                              "Comment Now",
-                              style: TextStyle(
-                                  fontFamily: 'Kanit',
-                                  color: Colors.white,
-                                  fontSize: 14),
-                            ),
+                            child: isloading
+                                ? spinkit
+                                : Text(
+                                    "Comment Now",
+                                    style: TextStyle(
+                                        fontFamily: 'Kanit',
+                                        color: Colors.white,
+                                        fontSize: 14),
+                                  ),
                           ),
                         )),
                       ],

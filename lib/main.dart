@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       themeMode: ThemeMode.system,
       theme: appTheme.lightTheme,
-      darkTheme: appTheme.darkTheme,
+      // darkTheme: appTheme.darkTheme,
       debugShowCheckedModeBanner: false,
       // theme: new ThemeData(scaffoldBackgroundColor: Colors.white),
       home: startScreen(),

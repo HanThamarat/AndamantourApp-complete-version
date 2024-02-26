@@ -32,6 +32,7 @@ class AuthService {
 
     await Firebase.initializeApp().then((googleUserData) async {
       await _googleSignIn.signIn().then((googleUserData) async {
+        
         String? name = googleUserData!.displayName;
         String email = googleUserData.email;
         String? image = googleUserData.photoUrl;
