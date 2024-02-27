@@ -150,6 +150,7 @@
                 $stmt = $conn->query("SELECT * ,CONCAT(firstName, ' ', lastName) AS concatName FROM ((reserve INNER JOIN packages ON reserve.packID = packages.packID) INNER JOIN packagestype ON packages.packtypeID = packagestype.packagesTypeId) WHERE reserveID = $reserveID");
                 $stmt->execute();
                 $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                $imageName = $row['image_payment'];
             ?>
             <div class="main-title">
                 <H3>Booking detail</H3>
@@ -158,6 +159,7 @@
             <div class="reserve-data">
                 <div class="img-container">
                     <img src="<?php echo "{$dataUser}paymentImage/" . $row['image_payment'] ?>" alt="">
+                    
                 </div>
                 <div class="data-reserve">
                     <div class="title">
@@ -239,6 +241,19 @@
                     <?php
                         }
                     ?>
+                    <div class="title" style="margin-top: 20px;">
+                        <i class="fa-solid fa-money-bill"></i>
+                        <H3>Slip checked : </H3><H3 id="data-container" style="margin-left: 5px;"></H3>
+                    </div>
+                    <div class="data-in">
+                        <span>Sender : </span><span id="sender"></span>
+                    </div>
+                    <div class="data-in">
+                        <span>Receiver : </span><span id="receiver"></span>
+                    </div>
+                    <div class="data-in">
+                        <span>Amount : </span><span id="amount"></span><span> THB</span>
+                    </div>
                 </div>
             </div>
             <div class="data-total">
@@ -267,5 +282,37 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script>
+        const container = document.getElementById("data-container");
+        const sender = document.getElementById("sender");
+        const receiver = document.getElementById("receiver");
+        const amount = document.getElementById("amount");
+        const url = "<?php echo "{$dataUser}ApiRouters/slipcheck/{$imageName}"?>";
+        const options = {
+        method: 'GET', 
+        };
+
+        fetch(url, options)
+        .then(response => response.json()) // Parse JSON response
+        .then(data => {
+            // Access and use the data
+            console.log(data);
+            const dataMessage = data.data.message
+            const dataAmount = data.data.amount
+            const dataSender = data.data.sender.name
+            const dataReceiver = data.data.receiver.name
+            console.log(dataMessage);
+            
+
+            container.innerHTML = dataMessage
+            sender.innerHTML = dataSender
+            receiver.innerHTML = dataReceiver
+            amount.innerHTML = dataAmount
+        })
+        .catch(error => {
+            // Handle errors
+            console.error("Error fetching data:", error);
+        });
+    </script>
 </body>
 </html>
