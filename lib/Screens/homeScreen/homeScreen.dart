@@ -173,14 +173,13 @@ class _homeScreensState extends State<homeScreens> {
                   Container(
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: TColors.white,
+                      color: Colors.grey.shade100,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20.0),
                         topRight: Radius.circular(20.0),
                       ),
                     ),
                     child: Container(
-                        color: Colors.grey.withOpacity(0.1),
                         child: Center(
                           child: Column(
                             children: [
