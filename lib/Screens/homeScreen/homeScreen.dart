@@ -102,12 +102,10 @@ class _homeScreensState extends State<homeScreens> {
                                           type: PageTransitionType.fade));
                                 },
                                 style: ElevatedButton.styleFrom(
-                                    elevation: 0.0,
+                                    elevation: 0.0, backgroundColor: Colors.white,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(5.0),
-                                    ),
-                                    // ignore: deprecated_member_use
-                                    primary: Colors.white,),
+                                    ),),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [

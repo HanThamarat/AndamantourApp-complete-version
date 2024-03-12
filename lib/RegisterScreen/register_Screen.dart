@@ -356,12 +356,10 @@ class _registerScreenState extends State<registerScreen> {
                                           register();
                                         },
                                         style: ElevatedButton.styleFrom(
-                                          elevation: 0.0,
+                                          elevation: 0.0, backgroundColor: GlobalColors.mainColor,
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(5.0)),
-                                          // ignore: deprecated_member_use
-                                          primary: GlobalColors.mainColor,
                                         ),
                                         child: _isloading? spinkit : Text(
                                                 "สมัครสมาชิก",

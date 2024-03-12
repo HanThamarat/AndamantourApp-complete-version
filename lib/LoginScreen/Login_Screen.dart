@@ -253,12 +253,10 @@ class _LoginSceenState extends State<LoginSceen> {
                                           Login();
                                         },
                                         style: ElevatedButton.styleFrom(
-                                          elevation: 0.0,
+                                          elevation: 0.0, backgroundColor: GlobalColors.mainColor,
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(5.0)),
-                                          // ignore: deprecated_member_use
-                                          primary: GlobalColors.mainColor,
                                         ),
                                         child: isloading
                                             ? spinkit
@@ -354,13 +352,11 @@ class _LoginSceenState extends State<LoginSceen> {
                                                   child: registerScreen()));
                                         },
                                         style: ElevatedButton.styleFrom(
-                                          elevation: 0.0,
+                                          elevation: 0.0, backgroundColor: Colors.white,
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(5.0),
                                           ),
-                                          // ignore: deprecated_member_use
-                                          primary: Colors.white,
                                           side: BorderSide(color: Colors.blue),
                                         ),
                                         child: Row(
