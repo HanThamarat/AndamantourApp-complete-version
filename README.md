@@ -1,4 +1,4 @@
-# AndamanTour-App
+# AndamanTour-App Project
 
-A new Flutter project.
+Develop a package tour management system. using Flutter, PHP, JavaScript, Node Js, Mysql.
 
